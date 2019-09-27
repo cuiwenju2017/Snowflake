@@ -38,7 +38,7 @@ public class FallingView extends View {
         init();
     }
 
-    private void init(){
+    private void init() {
         fallObjects = new ArrayList<>();
     }
 
@@ -53,7 +53,7 @@ public class FallingView extends View {
         viewHeight = height;
     }
 
-    private int measureSize(int defaultSize,int measureSpec) {
+    private int measureSize(int defaultSize, int measureSpec) {
         int result = defaultSize;
         int specMode = View.MeasureSpec.getMode(measureSpec);
         int specSize = View.MeasureSpec.getSize(measureSpec);
@@ -69,8 +69,8 @@ public class FallingView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if(fallObjects.size()>0){
-            for (int i=0;i<fallObjects.size();i++) {
+        if (fallObjects.size() > 0) {
+            for (int i = 0; i < fallObjects.size(); i++) {
                 //然后进行绘制
                 fallObjects.get(i).drawObject(canvas);
             }
@@ -89,6 +89,7 @@ public class FallingView extends View {
 
     /**
      * 向View添加下落物体对象
+     *
      * @param fallObject 下落物体对象
      * @param num
      */
@@ -98,7 +99,7 @@ public class FallingView extends View {
             public boolean onPreDraw() {
                 getViewTreeObserver().removeOnPreDrawListener(this);
                 for (int i = 0; i < num; i++) {
-                    FallObject newFallObject = new FallObject(fallObject.builder,viewWidth,viewHeight);
+                    FallObject newFallObject = new FallObject(fallObject.builder, viewWidth, viewHeight);
                     fallObjects.add(newFallObject);
                 }
                 invalidate();
