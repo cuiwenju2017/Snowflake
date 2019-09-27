@@ -1,0 +1,81 @@
+﻿/*js代码(www.ph.cn)是IT资源下载与IT技能学习平台。我们拒绝滥竽充数，只提供精品IT资源！*/
+:root {
+  font-family: "Microsoft Yahei", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: rgb(119, 13, 13);
+  background: radial-gradient(
+    circle,
+    rgba(119, 13, 13, 0.92) 64%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+.label {
+  font-size: 2.2rem;
+  background: url("../img/6368077651977322227241996.png");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: moveBg 30s linear infinite;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 30%;
+  }
+  100% {
+    background-position: 1000% 500%;
+  }
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  user-select: none;
+}
+
+.time {
+  color: #d99c3b;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.time span {
+  padding: 0 14px;
+  font-size: 0.8rem;
+}
+
+.time span div {
+  font-size: 3rem;
+}
+
+@media (max-width: 740px) {
+  .label {
+    font-size: 1.7rem;
+  }
+  .time span {
+    padding: 0 16px;
+    font-size: 0.6rem;
+  }
+  .time span div {
+    font-size: 2rem;
+  }
+}
+/*Powered by www.php.cn*/
