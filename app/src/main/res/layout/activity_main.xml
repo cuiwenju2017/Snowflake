@@ -10,7 +10,7 @@
     <WebView
         android:id="@+id/wv"
         android:layout_width="match_parent"
-        android:layout_height="240dp" />
+        android:layout_height="200dp" />
 
     <com.shanjing.snowflake.FallingView
         android:id="@+id/fallingView"

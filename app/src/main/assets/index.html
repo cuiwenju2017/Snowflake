@@ -132,7 +132,7 @@ new Snow();
 var date = new Date;
 var year = date.getFullYear() + 1; 
 var NY = document.getElementById("newYear");
-NY.innerHTML = year+ " 年新年倒计时";
+NY.innerHTML = year+ " 年元旦倒计时";
 const comingdate = new Date("Jan 1, "+year+" 00:00:00");
 
 const d = document.getElementById("d");
@@ -157,6 +157,7 @@ const countdown = setInterval(() => {
 }, 1000);
 
 const getTrueNumber = x => (x < 10 ? "0" + x : x);
+
 
 
 </script>

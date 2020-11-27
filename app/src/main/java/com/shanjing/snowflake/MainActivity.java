@@ -29,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
         // 即asserts文件夹下有一个color2.html
         wv.loadUrl("file:///android_asset/index.html");
 
-
         //初始化一个雪花样式的fallObject
         FallObject.Builder builder = new FallObject.Builder(getResources().getDrawable(R.drawable.snow_flake));
         FallObject fallObject = builder
                 .setSpeed(6, true)
-                .setSize(40, 40, true)
+                .setSize(25, 25, true)
                 .setWind(5, true, true)
                 .build();
 
